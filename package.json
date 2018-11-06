@@ -1,0 +1,53 @@
+{
+  "name": "shallow-memo",
+  "version": "1.0.0-alpha.0",
+  "description": "Shallow compare properties between two objects",
+  "main": "dist/shallow-memo.js",
+  "module": "dist/shallow-memo.es.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types",
+    "typings",
+    "LICENSE",
+    "*.md"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist && rimraf types",
+    "build": "rollup -c",
+    "test": "npm run test:source && npm run test:cjs && npm run test:umd",
+    "test:source": "TEST_ENV=test jest",
+    "test:cjs": "TEST_ENV=cjs jest",
+    "test:umd": "TEST_ENV=umd jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pshrmn/shallow-memo.git"
+  },
+  "keywords": [
+    "React",
+    "memo",
+    "shallow"
+  ],
+  "author": "Paul Sherman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pshrmn/shallow-memo/issues"
+  },
+  "homepage": "https://github.com/pshrmn/shallow-memo#readme",
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.67.0",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-replace": "^2.1.0",
+    "rollup-plugin-size-snapshot": "^0.7.0",
+    "rollup-plugin-typescript2": "^0.17.2",
+    "rollup-plugin-uglify": "^6.0.0",
+    "ts-jest": "^23.10.4",
+    "typescript": "^3.1.6"
+  }
+}

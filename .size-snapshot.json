@@ -1,0 +1,31 @@
+{
+  "dist/shallow-memo.js": {
+    "bundled": 1632,
+    "minified": 669,
+    "gzipped": 312
+  },
+  "dist/shallow-memo.es.js": {
+    "bundled": 1615,
+    "minified": 656,
+    "gzipped": 303,
+    "treeshaked": {
+      "rollup": {
+        "code": 0,
+        "import_statements": 0
+      },
+      "webpack": {
+        "code": 951
+      }
+    }
+  },
+  "dist/shallow-memo.umd.js": {
+    "bundled": 1987,
+    "minified": 784,
+    "gzipped": 370
+  },
+  "dist/shallow-memo.min.js": {
+    "bundled": 784,
+    "minified": 784,
+    "gzipped": 370
+  }
+}
