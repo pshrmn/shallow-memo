@@ -9,7 +9,7 @@ npm install shallow-memo
 ```
 
 ```js
-import shallowMemo from "shallowMemo";
+import shallowMemo from "shallow-memo";
 
 function MyComponent(props) {...};
 
