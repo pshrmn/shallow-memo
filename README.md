@@ -13,7 +13,33 @@ import shallowMemo from "shallow-memo";
 
 function MyComponent(props) {...};
 
-export default React.memo(MyComponent, shallowMemo);
+const MemoizedMyComponent = React.memo(MyComponent, shallowMemo);
+```
+
+### Why?
+
+Inline objects/arrays create a new object/array every render. This means that while two objects or two arrays may represent the same values, they are not equal (using a `===` reference check).
+
+This function will fall let you use inline objects/arrays without unnecessary re-renders.
+
+```jsx
+// pass an inline object
+ReactDOM.render((
+  <React.Fragment>
+    <MyComponent value={{ one: 1, two: 2 }} />
+    <MemoizedMyComponent value={{ one: 1, two: 2 }} />
+  </React.Fragment>
+), root);
+
+// re-rendering with the same values, but a different object
+// the non-memoized component will re-render, but the memoized
+// component will not
+ReactDOM.render((
+  <React.Fragment>
+    <MyComponent value={{ one: 1, two: 2 }} />
+    <MemoizedMyComponent value={{ one: 1, two: 2 }} />
+  </React.Fragment>
+), root);
 ```
 
 ### Children Props
