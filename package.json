@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/pshrmn/shallow-memo#readme",
   "devDependencies": {
+    "@types/jest": "^23.3.9",
     "jest": "^23.6.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
