@@ -42,9 +42,9 @@ ReactDOM.render((
 ), root);
 ```
 
-### Children Props
+### Reaact Element Props
 
-This does not prevent re-renders when a component's `children` contains React elements.
+This does not prevent re-renders when props contain React elements.
 
 ```jsx
 function Wrapper({ children }) {
